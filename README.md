@@ -1,2 +1,2 @@
 # andyberkheimer.github.io
-andyb.io
+Source material for www.andyb.io
