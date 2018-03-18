@@ -7,4 +7,4 @@ guid: http://www.andyb.io/2018/03/18/how-keys-work.html
 ---
 **How Keys Work**. A GIF is worth a thousand words.
 
-<img src="http://www.andyb.io/fa8ce5ea45.gif" width="320" height="180" />
+<img src="http://www.andyb.io/uploads/2018/how-keys-work.gif" width="320" height="180" />
