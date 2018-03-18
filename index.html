@@ -1,80 +1,45 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
-<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!-->
-<html>
-<!--<![endif]-->
+---
+layout: default
+---
+<header class="masthead">
+  <h1 class="masthead-title">
+    <a href="{{ site.baseurl }}/">{{ site.name }}<span>&#39;s microblog</span></a>
+  </h1>
+  <nav class="masthead-nav">
+	{% assign sorted_pages = site.pages | sort: "order" %}
+	{% for page in sorted_pages %}
+		{% if page.title %}
+			<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+		{% endif %}
+	{% endfor %}
 
-<head>
-    <meta charset="utf-8">
+	<a class="page-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+  </nav>
+</header>
+<div class="content list h-feed">
+{% if site.posts.size == 0 %}
+  <h2>No post found</h2>
+{% else %}
+{% for post in paginator.posts %}
+  <div class="list-item h-entry">
+	{% if post.microblog == false %}
+		<h1 class="home-title">{{ post.title }}</h1>
+	{% endif %}
+    <div class="content post e-content">
+      {{ post.content }}
+    </div>
+    <div class="list-post-date">
+      <a href="{{ site.baseurl }}{{ post.url }}" class="u-url"><time class="dt-published" datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></a>
+    </div>
+  </div>
+{% endfor %}
+{% endif %}
+</div>
 
-    <title>Andy Berkheimer</title>
-    <meta content=
-    "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    name="viewport">
-    <style type="text/css">
-        figure {margin: 0;}
-    </style>
-    <link href="avatar.png" rel="shortcut icon">
-    <link href="avatar.png" rel="apple-touch-icon-precomposed">
-    <link href="main-min.css" rel="stylesheet">
-    <!-- HTML5 Shiv -->
-    <!--[if lt IE 9]>
-        <script src="html5shiv.js"></script>
-    <![endif]-->
+{% if paginator.previous_page or paginator.next_page %}
+    {% include pagination.html %}
+{% endif %}
 
-    <style>
-        body {
-        background: #464850;
-        }
-
-        .blog-title {
-        font-family: sans-serif, "Helvetica Neue", HelveticaNeue, Arial, sans-serif;
-        font-weight: bold;
-        }
-
-        .blog-title a {
-        color: #dcecf5;
-        }
-
-        a {
-        color: #bad8eb;
-        }
-
-        .user-avatar {
-        background-color: #464850;
-        border-color: #464850;
-        }
-
-        .avatar-style-square .user-avatar {
-        -webkit-box-shadow: 0 0 0 4px #464850;
-        box-shadow: 0 0 0 4px #464850;
-        }
-
-        @media screen and (max-device-width: 568px) {
-        .avatar-style-square .user-avatar {
-            -webkit-box-shadow: 0 0 0 3px #464850;
-            -moz-box-shadow: 0 0 0 3px #464850;
-            box-shadow: 0 0 0 3px #464850;
-        }
-        }
-    </style>
-</head>
-
-<body class="grid index-page no-header-image contain-header-image"
-data-urlencoded-name="andyb-io">
-    <section id="page">
-        <div class="header-wrapper no-image avatar-style-square">
-            <header id="header">
-                <div class="blog-title-wrapper content">
-                    <figure class="avatar-wrapper animate">
-                        <a class="user-avatar" href="/" style=
-                        "background-image: url(avatar.png)"><img alt="" class=
-                        "print-only invisible" src="avatar.png"></a>
-                    </figure>
-                </div>
-            </header>
-        </div>
-    </section>
-</body>
-</html>
+<footer class="site-footer">
+	<p class="text">{{ site.description }}</p>
+</footer>
