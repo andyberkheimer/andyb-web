@@ -1,22 +1,48 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# # # # # # # #
+#   K i k o   #
+# # # # # # # #
 
-# Site settings
-title: Andy
-email: faker@andyb.io
-description: > # this means to ignore newlines until "baseurl:"
-  Making the videos play everywhere.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.andyb.io" # the base hostname & protocol for your site
-twitter_username: andyberkheimer
-github_username:  andyberkheimer
-permalink: /:year/:month/:title
+# - markdown: kramdown
 
-# Build settings
-markdown: kramdown
+# Sass
+sass:
+  style:            :compressed
 
-theme: jekyll-theme-minimal
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+
+title: "Andy"
+tagline: ""
+description: "Follow <a href=\"https://micro.blog/andyb\">@andyb on Micro.blog</a>."
+credits: "Follow <a href=\"https://micro.blog/andyb\">@andyb on Micro.blog</a>."
+baseurl: ""
+url: "https://andyb.micro.blog"
+markdown: "kramdown"
+username: "andyb"
+permalink: "/:year/:month/:day/:title.html"
+relative_permalinks: false
+author: "Andy"
+name: "Andy"
+gravatar_hash: "afeeaeaa727cd52ccb14d1231a30c5e0"
+avatar: "https://micro.blog/andyb/avatar.jpg"
+full_name: "Andy"
+bio: ""
+twitter_username: ""
+github_username: ""
+instagram_username: ""
+paginate: 20
+paginate_path: "/page/:num/"
+timezone: "US/Pacific-New"
+site_id: "3559"
