@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
 title: About
 permalink: /about/
+order: 0
 ---
-
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+This is the placeholder text for your about page. You can edit this text under Account on Micro.blog.
