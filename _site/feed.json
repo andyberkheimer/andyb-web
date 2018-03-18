@@ -1,0 +1,25 @@
+{
+	"version": "https://jsonfeed.org/version/1",
+	"title": "Andy",
+	"home_page_url": "https://andyb.micro.blog/",
+	"feed_url": "https://andyb.micro.blog/feed.json",
+	"items": [
+		
+		{
+			"id": "http://andyb.micro.blog/2018/03/18/how-keys-work.html",
+	      	
+			"content_html": "<p><strong>How Keys Work</strong>. A GIF is worth a thousand words.</p>\n\n<p><img src=\"http://andyb.micro.blog/uploads/2018/fa8ce5ea45.jpg\" width=\"320\" height=\"180\" /></p>\n",
+			"date_published": "2018-03-18T10:53:00-07:00",
+			"url": "https://andyb.micro.blog/2018/03/18/how-keys-work.html"
+		},
+		
+		{
+			"id": "http://andyb.micro.blog/2018/03/18/174736.html",
+	      	
+			"content_html": "<p><strong><a href=\"https://www.theatlantic.com/technology/archive/2018/01/the-strange-brands-in-your-instagram-feed/550136/\">Kids These Days</a></strong>. Fascinating story on the niche retail brands buying so many Instagram ads. Teenagers in their bedrooms mastering Facebook ad tools, Shopify, and AliExpress.</p>\n",
+			"date_published": "2018-03-18T10:47:00-07:00",
+			"url": "https://andyb.micro.blog/2018/03/18/174736.html"
+		}
+		
+	]
+}
