@@ -3,7 +3,7 @@ layout: post
 microblog: true
 audio: 
 date: 2018-03-24 16:00 -0700
-guid: http://www.andyb.io/2018/03/24/deli-haus-nostalgia.html
+guid: http://www.andyb.io/2018/03/24/deli-haus-nostalgia.md
 ---
 <img src="http://www.andyb.io/uploads/2018/deli-haus.jpg” width=“500” height=“350” />
 
