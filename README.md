@@ -1,2 +1,2 @@
 # andyberkheimer.github.io
-Source material for www.andyb.io, served via GitHub Pages.
+Source material for www.andyb.dev, served via GitHub Pages.
